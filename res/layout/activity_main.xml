@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ct.codec.dji_sdk_basicopencv.MainActivity"
+    android:background="#000000" >
+
+    <TextureView 
+        android:id="@+id/preview_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    
+    <TextView
+        android:id="@+id/ConnectStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    <SurfaceView 
+        android:id="@+id/preview_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" 
+        />
+    <Button 
+        android:id="@+id/btn_track"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Track"
+        android:layout_margin="5dp"/>"
+    
+    <RelativeLayout 
+        android:id="@+id/ly_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <Button 
+            android:id="@+id/btn_operate"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/tv_coefficient"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"/>"
+        <SeekBar
+        	android:id="@+id/seekbar"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_toRightOf="@id/btn_operate"
+        	android:layout_toLeftOf="@id/tv_coefficient"
+        	android:layout_centerVertical="true"
+        	android:padding="5dp"
+        	android:max="100"/>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>
